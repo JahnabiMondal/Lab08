@@ -17,4 +17,19 @@ public class City {
     String getProvinceName(){
         return this.province;
     }
+
+
+    /**
+     * This method checks if two cities and its provinces are equal based on theirs names
+     * @param o
+     * @return
+     * referred lab06
+     */
+    @Override
+    public boolean equals(Object o) {
+        City city = (City) o;
+        if(!(city instanceof City))
+            return false;
+        return this.city.equals(city.getCityName()) && this.province.equals(city.getProvinceName());
+    }
 }
