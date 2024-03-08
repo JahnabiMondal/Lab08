@@ -68,9 +68,9 @@ public class CustomListTest {
 
     /**
      * first get count
-     * then add a city and increase count by 1
+     * then add a (or two cities) city and increase count by 1 (or 2)
      * then count city
-     * check count increased by 1
+     * check count increased by 1 (or 2)
      */
     @Test
     public void CountCitiesTest() {
@@ -79,7 +79,7 @@ public class CustomListTest {
         list.addCity(new City("Edmonton", "AB"));
         list.addCity(new City("Tokyo", "JP"));
         list.countCities();
-        assertEquals(list.getCount(),listSize + 1);
+        assertEquals(list.getCount(),listSize + 2);
     }
 
 }
