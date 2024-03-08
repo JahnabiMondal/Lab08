@@ -49,6 +49,13 @@ public class CustomListTest {
         boolean result = list.hasCity(new City("Edmonton", "AB"));
         assertTrue(result);
     }
+
+    /**
+     * first get count
+     * then add a city and increase count by 1
+     * then delete city
+     * check count minus 1
+     */
     @Test
     public void DeleteCityTest() {
         list = MockCityList();
@@ -59,6 +66,20 @@ public class CustomListTest {
         assertEquals(list.getCount(),listSize);
     }
 
-
+    /**
+     * first get count
+     * then add a city and increase count by 1
+     * then count city
+     * check count increased by 1
+     */
+    @Test
+    public void CountCitiesTest() {
+        list = MockCityList();
+        int listSize = list.getCount();
+        list.addCity(new City("Edmonton", "AB"));
+        assertEquals(list.getCount(),listSize + 1);
+        list.countCities();
+        assertEquals(list.getCount(),listSize + 1);
+    }
 
 }

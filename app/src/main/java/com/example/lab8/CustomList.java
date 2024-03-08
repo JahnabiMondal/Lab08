@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CustomList extends ArrayAdapter<City> {
 
@@ -72,12 +73,19 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     /**
-     * This method deletes the name of the city if it exists in the list, if not then throws an exception
+     * this method deletes the name of the city if it exists in the list, if not then throws an exception
      * @param city the name of the city
      */
     public void deleteCity(City city) {
         if (hasCity(city))
             cities.remove(city);
+    }
+
+    /**
+     * this method counts how many cities are there in the list
+     */
+    public void countCities() {
+
     }
 
 }
